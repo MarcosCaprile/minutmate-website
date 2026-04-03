@@ -1,58 +1,3 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
-
-const form = document.getElementById('waitlist-form');
-const message = document.getElementById('form-message');
-
-function setMessage(text, type) {
-  message.textContent = text;
-  message.className = 'form-message ' + type;
-}
-
-if (form) {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const name = document.getElementById('name')?.value.trim() || '';
-    const email = document.getElementById('email')?.value.trim() || '';
-
-    if (!name || !email) {
-      setMessage('Please enter your name and email.', 'error');
-      return;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      setMessage('Please enter a valid email address.', 'error');
-      return;
-    }
-
-    const existing = JSON.parse(localStorage.getItem('minutmate_waitlist') || '[]');
-    existing.push({
-      name,
-      email,
-      submittedAt: new Date().toISOString()
-    });
-
-    form.reset();
-    setMessage('Thanks — you are on the waitlist.', 'success');
-  });
-}
-
 const elements = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver(entries => {
@@ -65,23 +10,57 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
-window.addEventListener("scroll", () => {
+const isDesktop = () => window.innerWidth > 760;
+
+function applyHeroParallax() {
+  if (!isDesktop()) return;
+
   const scrollY = window.scrollY;
   const visual = document.querySelector(".hero-visual");
-
-  if (visual) {
-    visual.style.transform = `translateY(${scrollY * 0.15}px)`;
-  }
-});
-
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-
   const banner = document.querySelector(".banner-card");
   const product = document.querySelector(".product-card");
   const accent = document.querySelector(".accent-card");
 
-  if (banner) banner.style.transform = `translateY(${scrollY * 0.05}px)`;
-  if (product) product.style.transform = `translateY(${scrollY * 0.1}px)`;
-  if (accent) accent.style.transform = `translateY(${scrollY * 0.15}px)`;
+  if (visual) {
+    visual.style.transform = `translateY(${scrollY * 0.15}px)`;
+  }
+
+  if (banner) {
+    banner.style.transform = `translateY(${scrollY * 0.05}px)`;
+  }
+
+  if (product) {
+    banner.style.transform = `translateY(${scrollY * 0.05}px)`;
+    product.style.transform = `translateY(${scrollY * 0.1}px)`;
+  }
+
+  if (accent) {
+    accent.style.transform = `translateY(${scrollY * 0.15}px)`;
+  }
+}
+
+function resetMobileHeroStyles() {
+  if (isDesktop()) return;
+
+  const visual = document.querySelector(".hero-visual");
+  const banner = document.querySelector(".banner-card");
+  const product = document.querySelector(".product-card");
+  const accent = document.querySelector(".accent-card");
+
+  if (visual) visual.style.transform = "none";
+  if (banner) banner.style.transform = "none";
+  if (product) product.style.transform = "none";
+  if (accent) accent.style.transform = "none";
+}
+
+window.addEventListener("scroll", () => {
+  if (isDesktop()) {
+    applyHeroParallax();
+  }
 });
+
+window.addEventListener("resize", () => {
+  resetMobileHeroStyles();
+});
+
+resetMobileHeroStyles();
