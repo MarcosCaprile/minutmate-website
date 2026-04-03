@@ -1,38 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>StudyConnect</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyConnect — MinutMate</title>
+  <meta name="description" content="StudyConnect helps students find study partners and tutors based on subjects, topics, and learning goals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="MinutMate home">
+      <img src="assets/logo-dark.png" class="brand-logo" alt="MinutMate logo">
+      <span class="brand-text">MinutMate</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="studyconnect.html">StudyConnect</a>
+      <a href="index.html#waitlist" class="nav-cta">Join waitlist</a>
+    </nav>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav container" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="studyconnect.html">StudyConnect</a>
+    <a href="index.html#waitlist">Join waitlist</a>
+  </nav>
+</header>
 
-<div class="container" style="padding:80px 0">
+<main>
+  <section class="hero page-hero">
+    <div class="container hero-grid hero-grid-product">
+      <div class="hero-copy fade-in">
+        <div class="eyebrow">First product by MinutMate</div>
+        <h1>StudyConnect helps students find the right academic support faster.</h1>
+        <p class="hero-text">Built for real student workflows, StudyConnect makes it easier to discover study partners, find relevant tutors, and reduce the friction before learning even starts.</p>
+        <div class="hero-actions">
+          <a href="index.html#waitlist" class="btn btn-primary">Join the waitlist</a>
+          <a href="#features" class="btn btn-secondary">See how it works</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item"><strong>Specific matching</strong><span>Because subjects are too broad — the exact topic matters.</span></div>
+          <div class="meta-item"><strong>Two support paths</strong><span>Find collaboration or direct help, depending on what you need.</span></div>
+        </div>
+      </div>
 
-  <h1>StudyConnect</h1>
+      <div class="hero-visual fade-in" aria-hidden="true">
+        <div class="visual-shell product-shell">
+          <div class="banner-card image-banner">
+            <img src="assets/banner-brand.png" class="hero-banner-image" alt="">
+            <div class="banner-overlay"></div>
+          </div>
+          <div class="floating-card product-card">
+            <span class="card-label">Smarter matching</span>
+            <h3>Topic-based support</h3>
+            <p>Find help that fits the exact thing you are trying to understand.</p>
+          </div>
+          <div class="floating-card accent-card">
+            <span class="tiny-pill">Student-first</span>
+            <p>Built around how students actually search, ask questions, and revise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    StudyConnect is the first product of MinutMate.
-  </p>
+  <section class="trust-strip">
+    <div class="container trust-grid fade-in">
+      <div class="trust-item"><span class="trust-title">Clear relevance</span><span class="trust-text">Find people based on subject, topic, and level.</span></div>
+      <div class="trust-item"><span class="trust-title">Faster support</span><span class="trust-text">Spend less time searching for help and more time learning.</span></div>
+      <div class="trust-item"><span class="trust-title">Built to expand</span><span class="trust-text">StudyConnect is the first product in a wider MinutMate ecosystem.</span></div>
+    </div>
+  </section>
 
-  <p>
-    It helps students find the right study partners and tutors based on:
-  </p>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="eyebrow">The problem</div>
+        <h2>Students often know what they need — but not where to find it.</h2>
+        <p>Good support already exists in many schools. The problem is that there is rarely a clean, simple system for finding the right person at the right moment.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-panel fade-in"><span class="panel-badge muted">Issue</span><h3>No clear connections</h3><p>Students do not know who can help with the exact topic they are stuck on.</p></article>
+        <article class="product-panel fade-in"><span class="panel-badge muted">Issue</span><h3>Learning alone is slower</h3><p>Without the right partner or feedback loop, motivation and clarity drop fast.</p></article>
+        <article class="product-panel fade-in"><span class="panel-badge muted">Issue</span><h3>Tutoring is hard to discover</h3><p>Useful help exists, but finding it is often messy, slow, or based on luck.</p></article>
+      </div>
+    </div>
+  </section>
 
-  <ul>
-    <li>Grade level</li>
-    <li>Subjects</li>
-    <li>Topics</li>
-  </ul>
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="eyebrow">How it works</div>
+        <h2>A cleaner path from “I need help” to “I found the right person.”</h2>
+      </div>
+      <div class="approach-grid">
+        <article class="approach-card fade-in"><h3>Create your profile</h3><p>Add your grade, subjects, and the topics you want to learn or get help with.</p></article>
+        <article class="approach-card fade-in"><h3>Get relevant matches</h3><p>Discover study partners and tutors who actually fit your academic context.</p></article>
+        <article class="approach-card fade-in"><h3>Start learning faster</h3><p>Reduce friction before the learning even begins.</p></article>
+      </div>
+    </div>
+  </section>
 
-  <p>
-    The goal is to make learning more efficient and collaborative.
-  </p>
+  <section class="section section-alt">
+    <div class="container content-split">
+      <div class="legal-card fade-in"><div class="eyebrow">Why it works</div><h3>StudyConnect is not generic networking.</h3><p>It is designed around academic relevance. The exact topic matters, not just the subject name.</p></div>
+      <div class="legal-card fade-in"><div class="eyebrow">Why it matters</div><h3>Better matching means better outcomes.</h3><p>The easier it is to find the right help, the easier it becomes to stay consistent and improve.</p></div>
+    </div>
+  </section>
 
-  <a href="index.html" class="btn btn-primary">Back to Home</a>
+  <section class="section">
+    <div class="container waitlist-wrap fade-in">
+      <div class="waitlist-copy">
+        <div class="eyebrow">Early access</div>
+        <h2>Be among the first to try StudyConnect.</h2>
+        <p>Join the MinutMate waitlist to get updates about launch progress and early access.</p>
+      </div>
+      <div class="waitlist-form">
+        <h3 style="margin-top:0;">Ready to follow the launch?</h3>
+        <p class="form-note" style="margin-top:8px;">Use the main waitlist on the home page to stay updated.</p>
+        <a href="index.html#waitlist" class="btn btn-primary full-width">Go to waitlist</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-</div>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="assets/logo-dark.png" class="footer-logo" alt="MinutMate logo">
+        <span class="brand-text">MinutMate</span>
+      </div>
+      <p>Building digital tools for students.</p>
+      <p class="footer-copy">© 2026 MinutMate. All rights reserved.</p>
+    </div>
+    <div class="footer-links footer-links-legal">
+      <a href="index.html">Home</a>
+      <a href="studyconnect.html">StudyConnect</a>
+      <a href="impressum.html">Legal Notice</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -3,241 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MinutMate</title>
-
-  <link rel="stylesheet" href="styles.css" />
+  <title>MinutMate — Digital tools for better student workflows</title>
+  <meta name="description" content="MinutMate builds digital tools for students. StudyConnect helps students find study partners and tutors faster." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-
 <header class="site-header">
   <div class="container nav">
-
-    <a href="#" class="brand">
-      <img src="assets/logo-dark.png" class="brand-logo">
+    <a href="index.html" class="brand" aria-label="MinutMate home">
+      <img src="assets/logo-dark.png" class="brand-logo" alt="MinutMate logo">
       <span class="brand-text">MinutMate</span>
     </a>
-
-    <nav class="desktop-nav">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="desktop-nav" aria-label="Primary">
       <a href="#products">Products</a>
-      <a href="#approach">Approach</a>
-      <a href="#waitlist" class="nav-cta">Get access</a>
+      <a href="studyconnect.html">StudyConnect</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#waitlist" class="nav-cta">Join waitlist</a>
     </nav>
-
   </div>
+  <nav id="mobile-menu" class="mobile-nav container" aria-label="Mobile">
+    <a href="#products">Products</a>
+    <a href="studyconnect.html">StudyConnect</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#waitlist">Join waitlist</a>
+  </nav>
 </header>
 
 <main>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-
-    <div class="hero-copy fade-in">
-      <div class="eyebrow">Student technology platform</div>
-
-      <h1>Find the right people to learn with.</h1>
-
-      <p class="hero-text">
-        Connect with study partners, find tutors, and build better learning systems.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#waitlist" class="btn btn-primary">Get early access</a>
-        <a href="#products" class="btn btn-secondary">Explore</a>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy fade-in">
+        <div class="eyebrow">Student technology company</div>
+        <h1>Digital tools for the way students actually work.</h1>
+        <p class="hero-text">
+          MinutMate builds focused products that help students learn smarter, stay organized,
+          and find the right people faster — starting with StudyConnect.
+        </p>
+        <div class="hero-actions">
+          <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
+          <a href="studyconnect.html" class="btn btn-secondary">Explore StudyConnect</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <strong>First product</strong>
+            <span>StudyConnect helps students find study partners and tutors.</span>
+          </div>
+          <div class="meta-item">
+            <strong>Built to grow</strong>
+            <span>More student tools are already part of the roadmap.</span>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-meta">
-        <div class="meta-item">
-          <strong>Real connections</strong>
-          <span>Find people that match your learning style</span>
-        </div>
-
-        <div class="meta-item">
-          <strong>Smarter learning</strong>
-          <span>Better results through collaboration</span>
+      <div class="hero-visual fade-in" aria-hidden="true">
+        <div class="visual-shell">
+          <div class="banner-card image-banner">
+            <img src="assets/banner-brand.png" class="hero-banner-image" alt="">
+            <div class="banner-overlay"></div>
+          </div>
+          <div class="floating-card product-card">
+            <span class="card-label">Now building</span>
+            <h3>StudyConnect</h3>
+            <p>Find study partners and tutors based on subject, topic, and need.</p>
+          </div>
+          <div class="floating-card accent-card">
+            <span class="tiny-pill">Next products</span>
+            <p>Planning, productivity, and academic support tools are already on the roadmap.</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="hero-visual fade-in">
-      <div class="visual-shell">
+  <section class="trust-strip">
+    <div class="container trust-grid fade-in">
+      <div class="trust-item"><span class="trust-title">Student-first</span><span class="trust-text">Built around real school and study workflows.</span></div>
+      <div class="trust-item"><span class="trust-title">Focused products</span><span class="trust-text">Each product solves one clear problem well.</span></div>
+      <div class="trust-item"><span class="trust-title">Long-term brand</span><span class="trust-text">MinutMate is the company. StudyConnect is the first launch.</span></div>
+    </div>
+  </section>
 
-        <div class="banner-card image-banner">
-          <img src="assets/banner-brand.png" class="hero-banner-image">
-          <div class="banner-overlay"></div>
-        </div>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="eyebrow">The problem</div>
+        <h2>Students spend too much time looking for help and too little time actually learning.</h2>
+        <p>In many schools, the right support already exists — but there is usually no clean system for finding the right study partner, tutor, or person for a specific topic.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-panel fade-in"><span class="panel-badge muted">Issue</span><h3>Hard to find the right help</h3><p>Students rarely know who can help with the exact topic they need.</p></article>
+        <article class="product-panel fade-in"><span class="panel-badge muted">Issue</span><h3>Studying alone is inefficient</h3><p>Without the right learning environment, motivation and clarity drop fast.</p></article>
+        <article class="product-panel fade-in"><span class="panel-badge muted">Issue</span><h3>Existing solutions are fragmented</h3><p>Students often jump between chats, friends, and random recommendations.</p></article>
+      </div>
+    </div>
+  </section>
 
-        <div class="floating-card product-card">
-          <span class="card-label">First product</span>
+  <section id="products" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="eyebrow">Products</div>
+        <h2>Starting with one focused product. Built for a wider student ecosystem.</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-panel featured fade-in">
+          <span class="panel-badge">Main product</span>
           <h3>StudyConnect</h3>
-          <p>Find study partners and tutors instantly.</p>
-        </div>
-
-        <div class="floating-card accent-card">
-          <span class="tiny-pill">Coming soon</span>
-          <p>More tools for productivity and planning.</p>
-        </div>
-
+          <p>A platform that helps students find study partners and tutors based on subject, topic, learning level, and academic need.</p>
+          <ul>
+            <li>Find study partners faster</li>
+            <li>Connect with tutors more easily</li>
+            <li>Reduce friction before learning even starts</li>
+          </ul>
+          <a href="studyconnect.html" class="btn btn-secondary panel-button">Learn more</a>
+        </article>
+        <article class="product-panel fade-in"><span class="panel-badge muted">Roadmap</span><h3>Planning tools</h3><p>Products that help students structure exams, deadlines, and revision more clearly.</p></article>
+        <article class="product-panel fade-in"><span class="panel-badge muted">Roadmap</span><h3>More student tools</h3><p>A growing product portfolio designed to improve student productivity and collaboration.</p></article>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust-strip">
-  <div class="container trust-grid fade-in">
-
-    <div class="trust-item">
-      <span class="trust-title">Built for students</span>
-      <span class="trust-text">Everything is designed around real student needs.</span>
-    </div>
-
-    <div class="trust-item">
-      <span class="trust-title">Focused products</span>
-      <span class="trust-text">Each tool solves one clear problem.</span>
-    </div>
-
-    <div class="trust-item">
-      <span class="trust-title">Scalable vision</span>
-      <span class="trust-text">More tools are already in development.</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- PRODUCT -->
-<section id="products" class="section">
-  <div class="container">
-
-    <div class="section-header fade-in">
-      <span class="eyebrow">Product</span>
-      <h2>Starting with one product. Built for many.</h2>
-    </div>
-
-    <div class="product-grid">
-
-      <div class="product-panel featured fade-in">
-        <span class="panel-badge">Main product</span>
-        <h3>StudyConnect</h3>
-
-        <ul>
-          <li>Find study partners instantly</li>
-          <li>Connect with tutors</li>
-          <li>Learn more efficiently</li>
-        </ul>
-        <a href="studyconnect.html" class="btn btn-secondary">
-            Learn more
-          </a>
+  <section id="how-it-works" class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="eyebrow">How it works</div>
+        <h2>A simpler path from “I need help” to “I found the right person.”</h2>
       </div>
-
-      <div class="product-panel fade-in">
-        <span class="panel-badge muted">Future</span>
-        <h3>Planning tools</h3>
-        <p>Smart organization tools for students.</p>
+      <div class="approach-grid">
+        <article class="approach-card fade-in"><h3>Create your profile</h3><p>Add your grade, subjects, and the topics you want to learn or get help with.</p></article>
+        <article class="approach-card fade-in"><h3>See relevant matches</h3><p>Find study partners or tutors who fit your exact academic context.</p></article>
+        <article class="approach-card fade-in"><h3>Start learning faster</h3><p>Spend less time searching and more time understanding and improving.</p></article>
       </div>
-
-      <div class="product-panel fade-in">
-        <span class="panel-badge muted">Future</span>
-        <h3>More apps</h3>
-        <p>Expanding into a full student ecosystem.</p>
-      </div>
-
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- APPROACH -->
-<section id="approach" class="section section-alt">
-  <div class="container">
-
-    <div class="section-header fade-in">
-      <span class="eyebrow">Approach</span>
-      <h2>Simple tools. Real impact.</h2>
+  <section class="section">
+    <div class="container content-split">
+      <div class="legal-card fade-in"><div class="eyebrow">Why MinutMate</div><h3>Built like a real company, not a one-off app.</h3><p>StudyConnect is the first product, but MinutMate is designed as a long-term brand for student-facing software.</p></div>
+      <div class="legal-card fade-in"><div class="eyebrow">Why now</div><h3>The current system is too random.</h3><p>Students already rely on people around them. MinutMate turns that informal process into a cleaner, more scalable system.</p></div>
     </div>
+  </section>
 
-    <div class="approach-grid">
-
-      <div class="approach-card fade-in">
-        <h3>Focused design</h3>
-        <p>We build simple tools that solve real problems.</p>
+  <section id="waitlist" class="section section-alt">
+    <div class="container waitlist-wrap fade-in">
+      <div class="waitlist-copy">
+        <div class="eyebrow">Early access</div>
+        <h2>Be part of the first users.</h2>
+        <p>Join the waitlist to get updates about StudyConnect and future MinutMate products.</p>
       </div>
-
-      <div class="approach-card fade-in">
-        <h3>Student-first</h3>
-        <p>Everything is designed for actual student workflows.</p>
-      </div>
-
-      <div class="approach-card fade-in">
-        <h3>Continuous growth</h3>
-        <p>New features and products are constantly being developed.</p>
-      </div>
-
+      <form action="https://formspree.io/f/mdapwovr" method="POST" class="waitlist-form">
+        <input type="hidden" name="_subject" value="New MinutMate Waitlist Signup">
+        <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+        <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
+        <button type="submit" class="btn btn-primary full-width">Join waitlist</button>
+        <p class="form-note">You will receive updates about StudyConnect and future MinutMate launches.</p>
+      </form>
     </div>
-
-  </div>
-</section>
-
-<!-- WAITLIST -->
-<section id="waitlist" class="section">
-  <div class="container waitlist-wrap fade-in">
-
-    <div class="waitlist-copy">
-      <span class="eyebrow">Join early</span>
-      <h2>Be part of the first users</h2>
-      <p>Get early access and updates.</p>
-    </div>
-
-    <form action="https://formspree.io/f/mdapwovr" method="POST" class="waitlist-form">
-
-      <input type="hidden" name="_subject" value="New MinutMate Waitlist Signup">
-
-      <label>
-        <span>Name</span>
-        <input type="text" name="name" required>
-      </label>
-
-      <label>
-        <span>Email</span>
-        <input type="email" name="email" required>
-      </label>
-
-      <button type="submit" class="btn btn-primary full-width">
-        Get access
-      </button>
-
-    </form>
-
-  </div>
-</section>
-
+  </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-
     <div>
       <div class="footer-brand">
-        <img src="assets/logo-dark.png" class="footer-logo">
+        <img src="assets/logo-dark.png" class="footer-logo" alt="MinutMate logo">
         <span class="brand-text">MinutMate</span>
       </div>
       <p>Building digital tools for students.</p>
-      <p>© 2026 MinutMate. All rights reserved.</p>
+      <p class="footer-copy">© 2026 MinutMate. All rights reserved.</p>
     </div>
-
-    <div class="footer-links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
+    <div class="footer-links footer-links-legal">
+      <a href="index.html">Home</a>
       <a href="studyconnect.html">StudyConnect</a>
+      <a href="impressum.html">Legal Notice</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
-
   </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
