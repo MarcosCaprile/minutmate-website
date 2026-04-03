@@ -51,3 +51,25 @@ window.addEventListener('scroll', () => {
 });
 window.addEventListener('resize', resetMobileHeroStyles);
 resetMobileHeroStyles();
+
+const form = document.querySelector('.waitlist-form');
+const successMessage = document.getElementById('success-message');
+
+if (form) {
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    form.reset();
+    successMessage.style.display = "block";
+  });
+}

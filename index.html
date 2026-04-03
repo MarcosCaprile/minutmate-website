@@ -14,7 +14,7 @@
 <header class="site-header">
   <div class="container nav">
     <a href="index.html" class="brand" aria-label="MinutMate home">
-      <img src="assets/logo-dark.png" class="brand-logo" alt="MinutMate logo">
+      <img src="assets/logo.png" class="brand-logo" alt="MinutMate logo">
       <span class="brand-text">MinutMate</span>
     </a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -40,24 +40,14 @@
     <div class="container hero-grid">
       <div class="hero-copy fade-in">
         <div class="eyebrow">Student technology company</div>
-        <h1>Digital tools for the way students actually work.</h1>
+        <h1>Digital tools for better student workflows.</h1>
         <p class="hero-text">
-          MinutMate builds focused products that help students learn smarter, stay organized,
-          and find the right people faster — starting with StudyConnect.
+          MinutMate builds the tools students need to learn smarter,
+          stay organized, and connect with the right people.
         </p>
         <div class="hero-actions">
           <a href="#waitlist" class="btn btn-primary">Join the waitlist</a>
           <a href="studyconnect.html" class="btn btn-secondary">Explore StudyConnect</a>
-        </div>
-        <div class="hero-meta">
-          <div class="meta-item">
-            <strong>First product</strong>
-            <span>StudyConnect helps students find study partners and tutors.</span>
-          </div>
-          <div class="meta-item">
-            <strong>Built to grow</strong>
-            <span>More student tools are already part of the roadmap.</span>
-          </div>
         </div>
       </div>
 
@@ -80,14 +70,20 @@
       </div>
     </div>
   </section>
-
-  <section class="trust-strip">
-    <div class="container trust-grid fade-in">
-      <div class="trust-item"><span class="trust-title">Student-first</span><span class="trust-text">Built around real school and study workflows.</span></div>
-      <div class="trust-item"><span class="trust-title">Focused products</span><span class="trust-text">Each product solves one clear problem well.</span></div>
-      <div class="trust-item"><span class="trust-title">Long-term brand</span><span class="trust-text">MinutMate is the company. StudyConnect is the first launch.</span></div>
+<section class="trust-strip">
+  <div class="container trust-grid fade-in">
+    <div class="trust-item">
+      <span class="trust-title">Student-first</span>
+      <span class="trust-text">Built around real school and study workflows.</span>
     </div>
-  </section>
+    <div class="trust-item">
+      <span class="trust-title">Focused products</span>
+      <span class="trust-text">Each product solves one clear problem well.</span>
+    </div>
+   </div>
+</section>
+
+
 
   <section class="section section-alt">
     <div class="container">
@@ -144,7 +140,7 @@
 
   <section class="section">
     <div class="container content-split">
-      <div class="legal-card fade-in"><div class="eyebrow">Why MinutMate</div><h3>Built like a real company, not a one-off app.</h3><p>StudyConnect is the first product, but MinutMate is designed as a long-term brand for student-facing software.</p></div>
+      <div class="legal-card fade-in"><div class="eyebrow">Why MinutMate</div><h3>Built like a real company, not a one-off app.</h3><p>MinutMate is designed to build a full ecosystem of tools for students — not just a single product. StudyConnect is only the beginning.</p></div>
       <div class="legal-card fade-in"><div class="eyebrow">Why now</div><h3>The current system is too random.</h3><p>Students already rely on people around them. MinutMate turns that informal process into a cleaner, more scalable system.</p></div>
     </div>
   </section>
@@ -152,16 +148,22 @@
   <section id="waitlist" class="section section-alt">
     <div class="container waitlist-wrap fade-in">
       <div class="waitlist-copy">
-        <div class="eyebrow">Early access</div>
-        <h2>Be part of the first users.</h2>
-        <p>Join the waitlist to get updates about StudyConnect and future MinutMate products.</p>
+        <div class="eyebrow">Waitlist</div>
+        <h2>Be among the first users.</h2>
+        <p>Join the waitlist to be notified when StudyConnect launches and get updates on future MinutMate products.</p>
       </div>
       <form action="https://formspree.io/f/mdapwovr" method="POST" class="waitlist-form">
         <input type="hidden" name="_subject" value="New MinutMate Waitlist Signup">
         <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
         <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
         <button type="submit" class="btn btn-primary full-width">Join waitlist</button>
-        <p class="form-note">You will receive updates about StudyConnect and future MinutMate launches.</p>
+        
+        <p class="form-note">You’ll be notified when StudyConnect launches and get updates on future MinutMate products.</p>
+
+        <!-- ✅ NEU -->
+        <p id="success-message" style="display:none; color:green; margin-top:10px;">
+          ✅ You’re on the waitlist. We’ll let you know when StudyConnect launches.
+        </p>
       </form>
     </div>
   </section>
