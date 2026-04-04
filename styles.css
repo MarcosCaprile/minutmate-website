@@ -116,3 +116,32 @@ h2{font-size:clamp(2rem,4vw,3.2rem)}
   .footer-links-legal{width:100%}
   .footer-links-legal a{width:100%}
 }
+.showcase-section {
+  padding: 80px 0;
+}
+
+.showcase-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-image {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 20px;
+  
+  /* 🔥 macht den "floating" Effekt */
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.05);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.showcase-container.visible .showcase-image {
+  opacity: 1;
+  transform: translateY(0);
+}
